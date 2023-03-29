@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Galery | CSS</title>
+    <style>
+        body{
+            background-color: #222;
+        }
+        img{
+            width: 300px;
+            border: 20px solid white;
+            margin-left: -172px;
+            margin-right:-172px;
+        }
+        #album{
+            margin-top: 100px;
+            text-align: center;
+        }
+        .i-1{
+            transform: rotate(-40deg);
+            border-color: rgba(240, 248, 255, 0.082);
+        }
+        .i-2{
+            transform: rotate(-20deg);
+            border-color: rgba(240, 248, 255, 0.26);
+        }
+        .i-3{
+            transform: rotate(0deg);
+            border-color: rgba(240, 248, 255, 0.432);
+        }
+        .i-4{
+            transform: rotate(20deg);
+            border-color: rgba(240, 248, 255, 0.74);
+        }
+        .i-5{
+            transform: rotate(40deg);
+        }
+
+    </style>
+</head>
+<body>
+    <p id="album">
+        <img src="img/img1.jpg" alt="img1" class="i-1">
+        <img src="img/img2.jpg" alt="img2" class="i-2">
+        <img src="img/img3.jpg" alt="img3" class="i-3">
+        <img src="img/img4.jpg" alt="img4" class="i-4">
+        <img src="img/img5.jpg" alt="img5" class="i-5">
+    </p>
+    
+</body>
+</html>
