@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INPUT VALIDATION & CSS</title>
+    <style>
+        body{
+            background-color: rgb(37, 5, 5);
+            text-align: center;          
+        }
+        label{
+            display: block;
+            width: 410px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 20px;
+            font-size: 25px;
+            background-color: rgb(224, 162, 162);
+            margin: 0 auto;
+            margin-top: 100px;
+            padding:30px;
+            padding-top: 40px;
+            justify-content: center;
+        }
+        input{
+            font-size: 18px;
+            outline: none;
+            border: 1px solid rgb(37, 5, 5);
+            border-radius: 5px;
+            background-color: rgb(240, 227, 227);
+        }
+        input:focus{
+            border: 1px solid green;
+            background-color: rgb(217, 247, 235);
+        }
+        input:invalid{
+            border-color: red;
+        }
+        small{
+            display: none;
+            font-size: 10px;
+            color: darkred;
+            margin-top: 10px;
+            text-align: right;
+            background-image: url(img/alert-outline.svg);
+            background-repeat:no-repeat;
+            background-size: 15px;
+            background-position-x: 180px;
+            background-position-y: -3px;            
+        }
+        input:invalid + small{
+            display: block;
+            animation: shake 0.15s 3;
+        }
+        #egname{
+            color: rgb(12, 68, 12);
+            font-weight: bold;
+        }
+        @keyframes shake {
+            from{
+                padding-right: 0;
+            }
+            to{
+                padding-right: 10px;
+            }
+        }
+        button{
+            font-size: 25px;
+            border: 1px solid black;
+            border-radius: 25px;
+            padding: 5px 15px;
+            background-image: linear-gradient(to right, white, darkred);
+        }
+    </style>
+</head>
+<body>
+    <form action="input-validation copy.html">
+        <br>
+        <label>
+            Your full Name :
+            <input type="text" placeholder="eg: Will Smith" pattern="^[A-Z][a-z]+ [A-Z][a-z]+$" >
+            <small>
+                You must enter the name as two capitalized words <br>like : 
+                <span id="egname"> Sam Jonson, Piter Parker, Jhony Depp, </span>etc.
+            </small>
+        </label>
+        <br>
+        <button>SEND</button>
+    </form>
+    
+</body>
+</html>
