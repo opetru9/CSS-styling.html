@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global City | CSS</title>
+    <style>
+        body{
+            background-color: #222;
+        }
+        #city{
+            background-color: #c5c3c3;
+            border: 3px solid rgb(91, 91, 161);
+            width: 400px;
+            height: 400px;
+        }
+        #square{
+            background-color: #999;
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin-right: -4px;
+            vertical-align: top;
+            font-size: 60px;
+            text-align: center;
+            line-height: 130px;            
+        }
+        /*
+        #music{
+            transform: translateX(55px) translateY(20px);
+        }*/
+        #streetA{
+             background-color: #666;
+            width: 250px;
+            height: 150px;
+            display: inline-block;            
+        }        
+        #streetB{
+            background-color: #3a3a3a;
+            width: 150px;
+            height: 250px;
+            display: inline-block;            
+        }
+        .road-markB{
+            border-right: 6px double #fff;
+            width: 71px;
+            height: inherit;
+            margin-right: -70px;
+            display: inline-block;
+        }
+        .left-band-v{
+            border-right: 1px dashed #fff;
+            width: 35px;
+            height: inherit;
+            display: inline-block;            
+        }
+        .right-band-v{
+            border-right: 1px dashed #fff;
+            width: 35px;
+            height: inherit;
+            display: inline-block;
+            margin-left: 68px;
+        }
+        #road-markA{
+            border-bottom:6px double #fff;
+            width: inherit;
+            height: 30px;            
+        }
+        .bottom-band{
+            display: inline-block;
+            border-bottom: 1px dashed white;
+            width: inherit;
+            height: 35px;            
+        }
+        .up-band{
+            display: inline-block;
+            border-bottom: 1px dashed white;
+            width: inherit;
+            height: 33px;
+            margin-top: 37px;
+        }
+        #park{
+            background-color: rgb(97, 235, 97);
+            display: inline-block;
+            width: 250px;
+            height: 250px;
+            vertical-align: top;
+            margin-left: -4px;
+            font-size: 50px;
+            line-height: 85px;
+        }
+    </style>
+</head>
+<body>
+    <div id="city">
+        <div id="square">
+            <div id="music"> 𝄞 </div>
+        </div>
+        <div id="streetA">
+            <div class="bottom-band" ></div>
+            <div id="road-markA">
+            <div class="up-band" ></div>
+        </div>           
+        </div>
+        <div id="streetB">
+
+            <div class="road-markB">
+                <div class="left-band-v"></div>
+            </div>
+            
+            <div class="right-band-v"></div>
+
+        </div>
+        <div id="park">
+            🌴🌲🌳🌴🌳🌴🌳🌲🌳🌲🌴🌲
+        </div>
+    </div>    
+</body>
+</html>
