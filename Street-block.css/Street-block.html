@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Street BLOCK | CSS</title>
+    <style>
+        body{
+            background-color: #223;
+           
+        }
+        #street{
+            border: 4px solid green;
+            width: 607px;
+            margin: 0 auto;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        #house{
+            height: 150px;
+            width: 100px;
+            display: inline-block;
+            transform: translateX(45px) translateY(61px); 
+        }
+        #hause-roof{
+            height: 0px;
+            width: 0px;
+            border: 50px solid transparent;
+            border-top: 0px;
+            border-bottom-color: #8d3535;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-width: 60px;
+        }
+        #hause-wall{
+            background-color: #815151;
+            height: 90px;
+            width: inherit;
+        }
+        #house-window{
+            background-color: yellow;
+            width: 30px;
+            height: 25px;
+            transform: translateX(8px) translateY(15px);
+        }
+        #house-window2{
+            background-color: yellow;
+            width: 30px;
+            height: 25px;
+            transform: translateX(62px) translateY(-10px);  
+        }
+        #door{
+            background-color: rgb(94, 25, 25);
+            width: 20px;
+            height: 35px;
+            transform: translateX(40px) translateY(5px); 
+        }
+        #chimney{
+            background-color: rgb(75, 50, 12);
+            width: 10px;
+            height: 25px;
+            transform: translateX(-35px) translateY(23px);
+        }
+        #house-window-left{
+            width: 12px;
+            height: 22px;
+            border: 2px solid #222;
+        }
+        #house-window-left2{
+            width: 12px;
+            height: 22px;
+            border: 2px solid #222;
+            transform:translateX(15px)translateY(-26px);  
+        }
+        #house-window-right{
+            width: 12px;
+            height: 22px;
+            border: 2px solid #222;
+        }
+        #house-window-right2{
+            width: 12px;
+            height: 22px;
+            border: 2px solid #222;
+            transform:translateX(15px)translateY(-26px); 
+        }
+        #house-tall{
+            display: inline-block;
+            background-color: #815151;
+            height: 300px;
+            width: 110px;
+            transform:translateX(255px)translateY(27px);
+        }
+         #door-tall{
+            background-color: rgb(94, 25, 25);
+            width: 20px;
+            height: 35px;
+            transform: translateX(45px) translateY(265px); 
+         }
+         #tall-windows{
+            display: inline-block;
+            font-size: 35px;
+            line-height: 40px;
+            text-align: center;
+            transform: translateY(-25px);
+         }
+         #tree{
+            display: inline-block;
+            font-size: 80px;
+            transform: translateX(270px) translateY(45px); 
+
+         }
+         #sun{
+            display: inline-block;
+            font-size: 120px;
+            transform: translateX(-320px) translateY(-140px); 
+         }
+         #statue{
+            display: inline-block;
+            color: rgba(245, 222, 179, 0.534);
+            font-size: 100px;
+            transform: translateX(-270px) translateY(64px);
+         }
+         #flower{
+           display: inline-block;
+            font-size: 20px;
+            transform: translateX(310px) translateY(1px);  
+         }
+         #flower2{
+            display: inline-block;
+            font-size: 20px;
+            transform: translateX(160px) translateY(1px); 
+         }
+    </style>
+</head>
+<body>
+    <div id="street">
+        
+        <div id="house">
+            <div id="hause-roof">
+                <div id="chimney"></div>
+            </div>
+            <div id="hause-wall">
+                <div id="house-window">
+                    <div id="house-window-left"></div>
+                    <div id="house-window-left2"></div>
+                </div>
+                <div id="house-window2">
+                    <div id="house-window-right"></div>
+                    <div id="house-window-right2"></div>
+                </div>
+                <div id="door"></div>
+            </div>
+        </div>
+        
+        <div id="house-tall">
+            <div id="door-tall"></div>
+            <div id="tall-windows">
+                𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁 𑨁
+            </div>
+            
+        </div>
+        <div id="tree">
+            🌲
+        </div>
+        <div id="sun">
+            ⛅
+        </div>
+        <div id="statue">
+            ♖
+        </div>
+        <div id="flower">
+            🌷
+        </div>
+        <div id="flower2">
+            🌷
+        </div>
+    </div>
+</body>
+</html>
