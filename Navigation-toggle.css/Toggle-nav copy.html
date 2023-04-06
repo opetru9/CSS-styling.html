@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Toggle Exemple | CSS</title>
+    <style>
+        body{
+            background-color: #123;
+            font-family:  arial;
+            margin:0;
+        }
+        .menu-nav{
+            display: inline-block;
+           background-color: #131;
+           margin-left: -250px;
+           transition: 0.5s;
+           width: 250px;     
+        }
+        .menu-nav:target{
+            margin: 0;
+        }
+        .menu-list{
+            list-style: none;
+            padding: 0;
+            margin: 0;      
+        }
+        .menu-title{
+            margin: 0;
+            padding: 20px 10px;
+            color: rgb(160, 224, 240);
+        }
+        li:first-child {
+            border-top: 1px solid #121;
+        }
+        a{
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-bottom: 1px solid #121;
+            color: rgb(160, 224, 240);
+        }
+        a:hover{
+            background-color: rgb(43, 129, 43);
+            color: white;
+        }
+        a::before{
+            content: "✔";
+            padding-right: 10px;
+            color: rgb(5, 238, 5);
+        }
+        .unaviable::before{
+            content: "✗";
+            color: red;
+        }
+        .toggler{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 1px solid ;
+            border-radius: 50px;
+            background-color: darkred;
+            padding: 8px;
+            line-height: 50px;
+        }
+        .toggler::before{
+            display: none;           
+        }
+        #button{
+            display: inline-block;
+            transform: translateY(-100px);
+        }   
+    </style>
+</head>
+<body>
+   <nav class="menu-nav" id="menu">
+        <h2 class="menu-title">Our Cusine</h2>
+        <ul class="menu-list">           
+            <li><a href="#">Soup</a></li>
+            <li><a href="#">Pizza</a></li>
+            <li><a href="#">Salad</a></li>
+            <li><a href="#" class="unaviable">Kebab</a></li>
+            <li><a href="#">Burger</a></li>
+        </ul>    
+   </nav>
+   <div id="button">
+         <a href="#menu" class="toggler">MENU</a>
+   </div>
+</body>
+</html>
