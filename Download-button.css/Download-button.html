@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download Button | CSS</title>
+    <style>
+        body{
+            background-color: #121;
+        }
+        .btn{
+            display: block; 
+            margin: 200px auto;
+            width: 235px;      
+        }
+        a{
+           display: inline-block;
+           text-decoration: none; 
+           font-size: 25px;
+           color: #121;
+           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           padding: 20px 24px 20px 26px;
+           background-color:rgb(169, 245, 179) ;
+           border: 2px solid #121;
+           border-radius: 55px;
+           box-shadow: 0 0 100px 1px rgb(169, 245, 179);    
+        }
+        .btn a::before{
+            content:"";
+            display: inline-block;
+            background-image: url(icon-download.png);
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: 3px 0;
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            vertical-align: middle;
+            border-radius: 20px;
+        }
+        .btn:target a::before{
+            animation:download 0.5s 10;
+        }
+        a:hover {
+            animation: hoveranimation 0.1s 2;
+            background-color: rgb(101, 240, 235);
+            box-shadow: 0 0 70px 1px rgb(169, 245, 179); 
+            border: 3px solid black;
+        }
+        @keyframes hoveranimation{
+            from{
+               transform: rotate(-1deg); 
+            }
+            to{
+              transform: rotate(1deg);  
+            }
+        }
+        @keyframes download{
+            from{
+               background-image: url(icon-download.png),
+                                linear-gradient( yellow ,green);
+               background-position: 3px 0,
+                                   0 -5px;
+               background-size: 30px 30px,
+                                 40px 5px;
+               background-position: 3px 0,0 0;                  
+            }
+            to{ 
+                background-image: url(icon-download.png),
+                              linear-gradient( yellow ,green);
+                background-position: 3px 0,
+                                    0 28px;                               
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="btn" id="download-btn">
+        <a href="#download-btn">DOWNLOAD</a>
+    </div>
+</body>
+</html>
