@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Effects | CSS</title>
+    <style>
+        body{
+            background-color: #122;
+        }
+        #imageeffects{
+            width: 600px;
+            height: 400px;
+            border: 3px solid white;
+            margin: 100px auto;
+            background-image: url(img.jpg);
+        }
+        #imageeffects .slide{
+            width: 530px;
+            height: 400px;
+            border-right: 4px solid rgb(95, 133, 95);
+            background-image: url(img-grey.png);        
+        }
+        .slide a{
+            display: inline-block;
+            color: rgb(16, 27, 27);
+            font-size: 25px;
+            text-decoration: none;
+            transform: translateX(504px)translateY(190px);
+            padding: 0 3px 0 3px;
+        }
+        #right:target .slide{
+            width: 530px;
+            transition: 3s;
+            
+        }
+        #right:target .slide a{
+         transform: translateX(504px)translateY(190px); 
+         animation: arrow-move-right 3s 1;  
+        }
+        #left:target .slide{
+            width: 70px;
+            transition: 3s;
+        }
+        #left:target .slide a{
+         transform: translateX(42px)translateY(190px); 
+         animation: arrow-move-left 3s 1;  
+        }
+        @keyframes arrow-move-right{
+            from{
+              transform: translateX(42px)translateY(190px);  
+            }
+            to{
+              transform: translateX(504px)translateY(190px);  
+            }
+        }
+        @keyframes arrow-move-left{
+            from{
+              transform: translateX(504px)translateY(190px);  
+            }
+            to{
+              transform: translateX(42px)translateY(190px);  
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="right">
+    <div id="left">
+        <div id="imageeffects">
+            <div class="slide">
+                <a href="#left">⮜</a>
+                <a href="#right" id="toright">⮞</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
