@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced seletors | Dropdown Meniu</title>
+    <style>
+        body{
+            background-color: #321;
+        }
+        nav{
+           margin-left: 550px;
+           margin-top: 200px;
+        }
+        nav label{
+            font-size: 30px;
+            border: 1px solid #321;
+            border-radius: 7px;
+            background-color: rgb(255, 60, 0);
+            padding: 20px 25px;
+            cursor: pointer;
+            user-select: none;
+        }
+        nav label:hover{
+            background-color:orange ;
+            border: 2px solid #999;
+            transition: 0.3s;
+        }
+        nav label::after{
+            content:"👇";
+        }
+        nav ul {
+        display: none;
+        padding-left: 0;
+        }
+        nav li{    
+            list-style: none;
+            text-align: center;
+            padding: 5px 0;        
+        }
+        nav ul li a{
+          text-decoration:none;
+          color: #222; 
+        }
+        nav ul li:hover{
+            background-color: rgba(248, 20, 20, 0.712);
+            transition: 0.3s;
+            border-top: 1px solid #555;
+            border-bottom: 1px solid rgb(245, 239, 151);
+        }
+        nav input{
+            display: none;
+        }
+        nav input:checked+label+ul{
+            display: block;
+            width: 200px;
+            height: 91px;
+            border: 1px solid #321;
+            border-radius: 0 0 5px 5px;
+            background-color: yellow;
+            transform: translateX(8px)translateY(3px);    
+            transition: 0.1s;
+        }
+        nav input:checked+label::after{
+            content: "👆";
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    <input type="checkbox" id="toggler">
+    <label for="toggler">
+        Dropdown
+    </label>
+    <ul>
+        <li><a href="">Item 1</a></li>
+        <li><a href="">Item 2</a></li>
+        <li><a href="">Item 3</a></li>
+    </ul>
+   </nav> 
+</body>
+</html>
