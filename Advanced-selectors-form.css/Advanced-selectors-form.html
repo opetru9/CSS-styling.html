@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced selectors form | CSS</title>
+    <style>
+     body{
+        background-color: rgb(36, 63, 10);
+     }
+     h1{
+        color: #111;
+        margin-bottom: 70px;
+     }
+     #form{
+        margin-top: 60px;
+        color: #89A;
+        text-align: center;
+     }
+     #form label{
+        display: block;
+        padding: 5px;
+     }
+     #form>label>input{
+        padding: 5px;
+        background-color: #ddd;
+        outline: none;
+        border: 2px solid #120;
+     }
+     #form div label input+ span{
+        display: block;
+        width: 50px;
+        margin: auto;
+        transform: translateX(-65px);
+     }
+     #form>label>input:focus{
+        background-color: white;
+     }
+     #form>label>input:valid{
+        border-color: #3dbdce;
+     }
+     #form>label>input:invalid{
+        border-color: red;
+     }
+     #form input:checked +span{
+        color: white;
+     }
+     #form div input{
+        display: none;
+     }
+     #form>div>label>input + span::before{
+          content: "▢";
+          padding-right: 5px;
+     }
+     #form>div>label>input:checked + span::before{
+        content: "🞕";
+     }
+     #form button{
+        background-color: #3dbdce;
+        border: 1px solid rgb(17, 3, 58);
+        font-weight: bold;
+        color: rgb(17, 3, 58);
+        padding: 5px 20px;
+        margin-top:50px;
+        margin-left: -95px;
+        box-shadow: 0 0 5px 2px #3dbdce;
+     }
+
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+        <h1>Subscribe to our newsletter</h1> 
+        <label>
+            <input type="text" placeholder="Your full name" autofocus>
+        </label>
+        <label>
+            <input type="text" placeholder="Your phone number" pattern="373-[0-9]{3}-[0-9]{3}-[0-9]{3}">
+        </label>
+        <label>
+            <input type="text" placeholder="Your email adress">
+        </label>
+        <div id="checkboxes">
+            <label>
+                <input type="checkbox"> <span>Sports</span> 
+            </label>
+            <label>
+                <input type="checkbox"> <span>Science</span> 
+            </label>
+            <label>
+                <input type="checkbox"> <span>Cars</span> 
+            </label>
+        </div>
+        <button>GO!!!</button>
+   </form>
+</body>
+</html>
