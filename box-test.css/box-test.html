@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Business Card Example</title>
+  <style>
+    body{
+      background-color: #121;
+    }
+    h1,h2,p,ul{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    #business-card{
+      margin: 100px auto;
+      background-color: #111;
+      width: 400px;
+      height: 200px;
+      font-family: arial;
+      font-size: smaller;
+      box-shadow: 0 0 3px 3px;
+    }
+    #business-card .name{
+     display: inline-block;
+     margin-left: 30px; 
+     text-align: right;
+     margin-right: 10px;
+     transform: translateY(-15px);
+
+    }
+    #business-card .info{
+      display: inline-block; 
+      border-left: 2px solid white; 
+      margin-top: 50px; 
+      padding-left: 10px;
+      color: antiquewhite;
+      
+    }
+    #business-card .name h1{
+      color: wheat;
+    }
+    #business-card .name h2{
+      color: rgb(133, 133, 2);
+    }
+    #business-card .name small{
+      color: #444;
+      
+    }
+    #business-card .info li{
+      
+      color: #444;
+    }
+    p{
+        padding-bottom: 5px;
+    }
+    #business-card .info li:first-of-type::before{
+      content: url(https://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/16/Mobile-3-icon.png);
+      padding-right: 5px;
+      vertical-align: middle;
+    }
+    #business-card .info li:nth-of-type(2)::before{
+        content: url(https://icons.iconarchive.com/icons/graphicloads/100-flat/16/email-2-icon.png);
+        padding-right: 5px;
+        vertical-align: middle;
+    }
+    #business-card .info li:last-of-type::before{
+        content: url(https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/16/Categories-applications-internet-icon.png);
+        padding-right: 5px;
+        vertical-align: middle;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="business-card">
+
+    <div class="name">
+      <h1>Firstname</h1>
+      <h2>Lastname</h2>
+      <small>web designer &#47; developer</small>
+    </div>
+    <div class="info">
+      <p>12345 Some Street, City<br>State, Province, Country</p>
+       <ul>
+         <li>+00 22 333444</li>
+         <li>email@somemail.example</li>
+         <li>www.exampledomain.example</li>
+       </ul>
+    </div>
+
+  </div>
+</body>
+</html>
